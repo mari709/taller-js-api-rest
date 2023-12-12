@@ -1,10 +1,13 @@
-const express = require('express');
+const express = require("express");
+const { getUsers } = require("../controller/user");
 
 const router = express.Router();
-const userController = require('../controllers/users');
 
-router.get('/', usersController.getUsers);
-router.get('/:id', usersController.getUser);
+router.get("/", getUsers);
+
+//const userController = require('../controllers/users');
+
+//router.get('/:id', usersController.getUser);
 
 /*
 const { getUsers, singUpUser, singInUser } = require('../controller/users');
